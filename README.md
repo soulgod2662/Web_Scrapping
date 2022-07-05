@@ -4,5 +4,7 @@ In this repository , i will show you various web automation done with selenium a
 MAKE SURE THAT YOU HAVE THE CORRECT LIBERARIES INSTALLED 
 
 pip3 install selenium 
+
+
 pip3 install chrome-manager
 
