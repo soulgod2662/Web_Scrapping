@@ -1,18 +1,31 @@
+# Import required modules
 import requests
-import pandas as pd
-import openpyxl
 import bs4
+import pandas as pd
 
-res = requests.get('https://www.macraesbluebook.com/')
-soup = bs4.BeautifulSoup(res.text, 'html')
+# Make requests from webpage
+url = 'https://www.macraesbluebook.com/'
+result = requests.get(url)
 
-hi = soup.select('.a_mbb')
-for i in hi:
-	list1 = i.text
-	data = list1.split()
-	print(data)
-	df = pd.DataFrame()
-	df['Name'] = data
-	for x in df['Name']:
-		df.to_excel('result.xlsx', index = False)
+# Creating soap object
+soup = bs4.BeautifulSoup(result.text,'lxml')
+
+data = []
+
+# Find the span and get data from it
+for i in soup.select('.td_tab_index'):
+	print(i.text)
+	data.append(i.text)
+
+# Display number of cases
+print(data)
+
+
+
+# Creating dataframe
+df = pd.DataFrame({"CompanyData": data})
+
+# Exporting data into Excel
+df.to_csv('Corona_Data.csv')
+
 		
