@@ -1,10 +1,6 @@
 # Web_Scrapping
 In this repository , i will show you various web automation done with selenium and Python
 
-MAKE SURE THAT YOU HAVE THE CORRECT LIBERARIES INSTALLED 
+Make sure you download all the Libraries required for each program
 
-pip3 install selenium 
-
-
-pip3 install chrome-manager
 
