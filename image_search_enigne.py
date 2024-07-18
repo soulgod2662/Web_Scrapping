@@ -2,7 +2,8 @@ import requests
 import os
 
 # Set up your API key and endpoint
-API_KEY = 'Mbdyop4oUsWkOhEon7kpGxfA8hyXzudxxuk4UA2o6YQulMfpccyaFLff'
+# Get an API key from the Pexels website and paste it down 
+API_KEY = 'YOUR_API_KEY'
 API_URL = 'https://api.pexels.com/v1/search'
 
 def download_images(query, num_images=5, output_dir='pexels_images'):
